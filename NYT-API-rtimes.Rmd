@@ -1,29 +1,29 @@
 ---
 title: "NYT API Load to Data Frame"
 author: "Fernando Figueres"
-subtitle: "DATA-607, Spring 2019""
+subtitle: "DATA-607, Spring 2019"
 output:
   html_document:
     df_print: paged
 ---
 
 
-```{r}
-library(rtimes)
-library(tidyverse)
-NYTIMES_API_KEY <- 'YbZIWxRcecum1Od5y9BU1ehtL9VtVXiN'
+```{r, echo=FALSE, warning=FALSE}
+suppressMessages(library(rtimes))
+suppressMessages(library(tidyverse))
+NYTIMES_API_KEY <- 'API_Key'
 ```
 
 ```{r}
 query <- "Costa Rica"
 begin_date <- "20190101"
 end_date <- "20190331"
-all_results <- FALSE
+all_results <- TRUE
 ```
 
 
-```{r}
-nytdata <- as_search(q = query, begin_date = begin_date, end_date = end_date, try_flatten = FALSE, all_results = )
+```{r, echo=FALSE}
+nytdata <- as_search(q = query, begin_date = begin_date, end_date = end_date, try_flatten = FALSE, all_results = all_results)
 ```
 
 ```{r}
